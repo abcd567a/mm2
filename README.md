@@ -31,7 +31,6 @@ The configuration file can be edited by following command; </br>
 Default setting are for a decoder like dump1090-mutability or dump1090-fa running on the RPi. </br>
 This can be changed by editing config file</br>
 You can add extra arguments, one per line starting with `--` </br>
-</br></br>
 ```
 --inConnectId 127.0.0.1:30005:ADSB
 --inConnectId 127.0.0.1:30105:MLAT
