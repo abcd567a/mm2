@@ -10,7 +10,11 @@ After script finishes, it displays following message
 INSTALLATION COMPLETED
 =======================
 PLEASE DO FOLLOWING:
-Open file mm2.sh for editing by following command:
+
+(1) In your browser, go to web interface at http://ip-of-pi:8787
+
+
+(2) Open file mm2.sh for editing by following command:
 
 sudo nano /usr/share/mm2/mm2.conf
 
@@ -26,7 +30,6 @@ then restart mm2 by following command:
 sudo systemctl restart mm2
 
 
-Web interface at http://ip-of-pi:8787
 
 To see status sudo systemctl status mm2
 To restart    sudo systemctl restart mm2
