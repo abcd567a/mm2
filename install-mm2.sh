@@ -32,7 +32,6 @@ echo "Writing code to config file mm2.conf"
 --inConnectId 127.0.0.1:30005:ADSB
 --inConnectId 127.0.0.1:30105:MLAT
 --web 8787
---location xx.xxxx:yy.yyyy
 EOM
 sudo chmod 644 ${CONFIG_FILE}
 
