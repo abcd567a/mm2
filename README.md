@@ -11,7 +11,9 @@ INSTALLATION COMPLETED
 =======================
 PLEASE DO FOLLOWING:
 Open file mm2.sh for editing by following command:
+
 sudo nano /usr/share/mm2/mm2.conf
+
 Add following line: --location xx.xxxx:yy.yyyy 
 (Replace xx.xxxx and yy.yyyy by your 
 actual latitude and longitude) 
