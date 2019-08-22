@@ -12,10 +12,14 @@ INSTALLATION COMPLETED
 PLEASE DO FOLLOWING:
 Open file mm2.sh for editing by following command:
 sudo nano /usr/share/mm2/mm2.conf
-replace xx.xxxx and yy.yyyy
-by your actual latitude and longitude
-in following line:
---location xx.xxxx:yy.yyyy
+Add following line: --location xx.xxxx:yy.yyyy 
+(Replace xx.xxxx and yy.yyyy by your 
+actual latitude and longitude) 
+After entering location, Save (Ctrl+o) and Close (Ctrl+x) file md2.conf 
+then restart md2 by following command: 
+
+sudo systemctl restart md2
+
 
 Web interface at http://ip-of-pi:8787
 
