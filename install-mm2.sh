@@ -82,7 +82,7 @@ echo ""
 echo -e "\e[33m(Replace xx.xxxx and yy.yyyy \e[39m"
 echo -e "\e[33mby your actual latitude and longitude) \e[39m"
 echo -e "\e[33mSave (Ctrl+o) and Close (Ctrl+x) file md2.conf \e[39m"
-echo -e "\e[33mthen restart md2 by following command:\e[39m"
+echo -e "\e[33mthen restart mm2 by following command:\e[39m"
 echo -e "\e[39m     sudo systemctl restart mm2 \e[39m"
 echo " "
 
