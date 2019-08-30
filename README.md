@@ -49,3 +49,12 @@ You can add extra arguments, one per line starting with `--` </br>
 --web 8787
 
 ```
+
+### UNINSTALL </br>
+To completely remove configuration and all files, give following 4 commands:
+```
+sudo systemctl stop mm2 
+sudo systemctl disable mm2 
+sudo rm /lib/systemd/system/mm2.service 
+sudo rm -rf /usr/share/mm2 
+```
