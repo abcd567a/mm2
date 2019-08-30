@@ -49,6 +49,13 @@ You can add extra arguments, one per line starting with `--` </br>
 --web 8787
 
 ```
+</br>
+
+**To see all config parameters** </br>
+```
+cd /usr/share/mm2
+./modesmixer2 --help
+```
 
 ### UNINSTALL </br>
 To completely remove configuration and all files, give following 4 commands:
