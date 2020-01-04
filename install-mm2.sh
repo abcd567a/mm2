@@ -60,7 +60,7 @@ WantedBy=default.target
 
 EOM
 
-sudo chmod 744 ${SERVICE_FILE}
+sudo chmod 644 ${SERVICE_FILE}
 sudo systemctl enable mm2
 sudo systemctl restart mm2
 
