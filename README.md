@@ -3,9 +3,9 @@
 </br>
 
 Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
-**(1) For 32 Bit Raspberri Pi OS:** </br>
+**(1) For 32 Bit Raspberry Pi OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
-**(2) For 64 Bit Raspberri Pi OS:** </br>
+**(2) For 64 Bit Raspberry Pi OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-64bit.sh)" ` </br></br>
 After script finishes, it displays following message
 ```
