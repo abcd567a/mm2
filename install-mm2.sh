@@ -10,6 +10,9 @@ sudo wget -O ${INSTALL_FOLDER}/modesmixer2_rpi2-3_deb9_20190223.tgz "https://dri
 echo "Unzipping downloaded file"
 sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_rpi2-3_deb9_20190223.tgz -C ${INSTALL_FOLDER}
 
+echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
+sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
+
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
 sudo touch ${SCRIPT_FILE}
