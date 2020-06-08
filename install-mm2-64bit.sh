@@ -10,6 +10,9 @@ sudo wget -O ${INSTALL_FOLDER}/modesmixer2_64bit_rpi4_Raspberry_Pi_OS_20200426.t
 echo "Unzipping downloaded file"
 sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_64bit_rpi4_Raspberry_Pi_OS_20200426.tgz -C ${INSTALL_FOLDER}
 
+echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
+sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
+
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
 sudo touch ${SCRIPT_FILE}
