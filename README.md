@@ -1,5 +1,5 @@
 ## mm2
-### ModeSMixer2 installation script for RPi 2/3/4 and Raspbian Stretch/Buster 
+### ModeSMixer2 installation script for RPi 2/3/4 and Raspbian Stretch/Buster, and Ubuntu 20.04 
 </br>
 
 Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
@@ -7,6 +7,8 @@ Copy-paste following command in SSH console and press Enter key. The script will
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
 **(2) For 64 Bit Raspberry Pi OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-64bit.sh)" ` </br></br>
+**(3) For Ubuntu 20.04 amd64:** </br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu20.sh)" ` </br></br>
 After script finishes, it displays following message
 ```
 =======================
@@ -14,10 +16,11 @@ INSTALLATION COMPLETED
 =======================
 PLEASE DO FOLLOWING:
 
-(1) In your browser, go to web interface at http://ip-of-pi:8787
+(1) If installed on RPi, in your browser, go to web interface at http://ip-of-pi:8787. 
+(2) If installed on Ubuntu20, in browser of Ubuntu go to web interface at http://localhost:8787 or http://127.0.0.1:8787
 
 
-(2) Open file mm2.sh for editing by following command:
+(3) Open file mm2.sh for editing by following command:
 
 sudo nano /usr/share/mm2/mm2.conf
 
