@@ -1,5 +1,5 @@
 ## mm2
-### ModeSMixer2 installation script for RPi 2/3/4 and Raspbian Stretch/Buster, and Ubuntu 20.04 
+### ModeSMixer2 installation script for RPi 2/3/4 and Raspbian Stretch/Buster, Ubuntu 20.04, and Debian 10.5 
 </br>
 
 Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
@@ -66,7 +66,7 @@ cd /usr/share/mm2
 ```
 
 ### UNINSTALL </br>
-To completely remove configuration and all files, give following 4 commands:
+To completely remove configuration and all files, give following 5 commands:
 ```
 sudo systemctl stop mm2 
 sudo systemctl disable mm2 
