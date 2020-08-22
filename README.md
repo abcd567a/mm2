@@ -7,8 +7,10 @@ Copy-paste following command in SSH console and press Enter key. The script will
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
 **(2) For 64 Bit Raspberry Pi OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-64bit.sh)" ` </br></br>
-**(3) For Ubuntu 20.04 amd64:** </br>
+**(3) For Ubuntu 20.04 (x86_64):** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu20.sh)" ` </br></br>
+**(4) For Debian 10.5 (x86_64):** </br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-debian10.sh)" ` </br></br>
 After script finishes, it displays following message
 ```
 =======================
