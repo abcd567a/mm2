@@ -38,6 +38,9 @@ echo "Writing code to config file mm2.conf"
 EOM
 sudo chmod 644 ${CONFIG_FILE}
 
+echo "Creating User mm2 to run modesmixer2"
+sudo useradd --system mm2
+
 echo "Creating Service file mm2.service"
 SERVICE_FILE=/lib/systemd/system/mm2.service
 sudo touch ${SERVICE_FILE}
@@ -49,6 +52,7 @@ Description=ModeSMixer2
 Wants=network.target
 After=network.target
 [Service]
+User=mm2
 RuntimeDirectory=modesmixer2
 RuntimeDirectoryMode=0755
 ExecStart=/bin/bash ${INSTALL_FOLDER}/mm2.sh
