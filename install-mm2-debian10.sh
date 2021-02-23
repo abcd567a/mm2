@@ -22,6 +22,7 @@ echo "Writing code to startup script file mm2.sh"
 #!/bin/sh
 CONFIG=""
 while read -r line; do CONFIG="\${CONFIG} \$line"; done < ${INSTALL_FOLDER}/mm2.conf
+cd ${INSTALL_FOLDER}
 ${INSTALL_FOLDER}/modesmixer2 \${CONFIG}
 EOM
 sudo chmod +x ${SCRIPT_FILE}
@@ -40,6 +41,9 @@ sudo chmod 644 ${CONFIG_FILE}
 
 echo "Creating User mm2 to run modesmixer2"
 sudo useradd --system mm2
+
+echo "Assigning ownership of install folder to user mm2"
+sudo chown mm2:mm2 -R ${INSTALL_FOLDER}
 
 echo "Creating Service file mm2.service"
 SERVICE_FILE=/lib/systemd/system/mm2.service
