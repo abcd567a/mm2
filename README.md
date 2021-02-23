@@ -65,6 +65,13 @@ cd /usr/share/mm2
 ./modesmixer2 --help
 ```
 
+### CLERING MAXIMUM COVERAGE CURVE ON THE MAP</br>
+The maximum coverage curve data is stored in file `distances.json`. If you want to clear the coverage plot and start a fresh plot, delete this file and restart mm2. Upon restart, when mm2 finds file `distances.json` does not exist, it will a new blank file, and start populating it with fresh data. </br>
+```
+sudo rm /usr/share/mm2/distances.json  
+sudo systemctl restart mm2   
+```
+
 ### UNINSTALL </br>
 To completely remove configuration and all files, give following 5 commands:
 ```
@@ -72,5 +79,6 @@ sudo systemctl stop mm2
 sudo systemctl disable mm2 
 sudo rm /lib/systemd/system/mm2.service 
 sudo rm -rf /usr/share/mm2 
-sudo rm /usr/bin/modesmixer2
+sudo rm /usr/bin/modesmixer2 
+sudo userdel mm2  
 ```
