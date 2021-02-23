@@ -73,7 +73,7 @@ sudo systemctl restart mm2
 ```
 
 ### UNINSTALL </br>
-To completely remove configuration and all files, give following 5 commands:
+To completely remove configuration and all files, give following 6 commands:
 ```
 sudo systemctl stop mm2 
 sudo systemctl disable mm2 
