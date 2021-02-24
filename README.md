@@ -72,7 +72,7 @@ The maximum coverage curve data is stored in file `distances.json`. If you want 
 `sudo systemctl stop mm2  `  </br>
 `sudo rm /distances.json  ` (For installation made before February 23, 2021) </br>
 `sudo rm /usr/share/mm2/distances.json  ` (For installation made on or after February 23, 2021) </br>
-sudo systemctl start mm2   
+`sudo systemctl start mm2   `
 
 
 ### UNINSTALL </br>
