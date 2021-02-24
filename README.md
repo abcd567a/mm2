@@ -68,11 +68,12 @@ cd /usr/share/mm2
 ### CLERING MAXIMUM COVERAGE CURVE ON THE MAP</br>
 The maximum coverage curve data is stored in file `distances.json`. If you want to clear the coverage plot and start a fresh plot, stop mm2, delete this file and start mm2. Upon start, when mm2 does not find file `distances.json`, it creates it's new blank copy, and start populating it with fresh data. </br>
 **IMPORTANT: Stop mm2 _before_ deleting the file `distances.json`.** </br>
-```
-sudo systemctl stop mm2   
-sudo rm /usr/share/mm2/distances.json  
+
+`sudo systemctl stop mm2  `  </br>
+`sudo rm /distances.json  ` (For installation made before February 23, 2021) </br>
+`sudo rm /usr/share/mm2/distances.json  ` (For installation made on or after February 23, 2021) </br>
 sudo systemctl start mm2   
-```
+
 
 ### UNINSTALL </br>
 To completely remove configuration and all files, give following 6 commands:
