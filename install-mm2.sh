@@ -1,14 +1,14 @@
 #!/bin/bash
-
+VERSION=modesmixer2_rpi4_deb10_20190413.tgz
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
 echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/modesmixer2_rpi2-3_deb9_20190223.tgz "https://drive.google.com/uc?export=download&id=18DjTxitzZj9RsVPxt7lmnptfL5eZqHxJ"
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=1YY7wQNtqrPk7qtE3OB9DGkc4nDalJsCS"
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_rpi2-3_deb9_20190223.tgz -C ${INSTALL_FOLDER}
+sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
