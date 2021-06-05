@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=modesmixer2_rpi4_deb10_20190413.tgz
+VERSION=modesmixer2_rpi4_deb10_20190413
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
