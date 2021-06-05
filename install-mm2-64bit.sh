@@ -1,14 +1,14 @@
 #!/bin/bash
-
+VERSION=modesmixer2_aarch64_rpi4_Raspberry_Pi_OS_20210228
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
 echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/modesmixer2_aarch64_rpi4_Raspberry_Pi_OS_20210228.tgz "https://drive.google.com/uc?export=download&id=1W9tSjI8ejh2PjQsDtqqvQhWTVk1JwqVE"    
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=1W9tSjI8ejh2PjQsDtqqvQhWTVk1JwqVE"    
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_aarch64_rpi4_Raspberry_Pi_OS_20210228.tgz -C ${INSTALL_FOLDER}
+sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
