@@ -1,11 +1,12 @@
 #!/bin/bash
 VERSION=modesmixer2_aarch64_rpi4_Raspberry_Pi_OS_20210228
+DOWNLOAD_ID=1W9tSjI8ejh2PjQsDtqqvQhWTVk1JwqVE
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
 echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=1W9tSjI8ejh2PjQsDtqqvQhWTVk1JwqVE"    
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=${DOWNLOAD_ID}"    
 
 echo "Unzipping downloaded file"
 sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
