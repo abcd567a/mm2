@@ -61,8 +61,7 @@ You can add extra arguments, one per line starting with `--` </br>
 
 **To see all config parameters** </br>
 ```
-cd /usr/share/mm2
-./modesmixer2 --help
+modesmixer2 --help
 ```
 
 ### CLERING MAXIMUM COVERAGE CURVE ON THE MAP</br>
