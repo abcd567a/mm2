@@ -1,14 +1,16 @@
 #!/bin/bash
-
+VERSION=modesmixer2_debian_10_x86_64_20200714
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
-echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/modesmixer2_debian_10_x86_64_20200714.tgz "https://drive.google.com/uc?export=download&id=1gKtk2rP_IgOK53ZJQX2MAERCkoqvbAD6"
+#echo "Downloading modeSMixer2 file from Google Drive"
+#sudo wget -O ${INSTALL_FOLDER}/modesmixer2_debian_10_x86_64_20200714.tgz "https://drive.google.com/uc?export=download&id=1gKtk2rP_IgOK53ZJQX2MAERCkoqvbAD6"
+echo "Downloading modeSMixer2 file from Github"
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_debian_10_x86_64_20200714.tgz -C ${INSTALL_FOLDER}
+sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
