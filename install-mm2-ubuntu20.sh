@@ -1,14 +1,16 @@
 #!/bin/bash
-
+VERSION=modesmixer2_ubuntu_20.04_x86_64_20210228
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
-echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/modesmixer2_ubuntu_20.04_x86_64_20210228.tgz "https://drive.google.com/uc?export=download&id=1PAKnH9pxPeXTKu3yrYRdtGHoDAhlheKo"
+#echo "Downloading modeSMixer2 file from Google Drive"
+#sudo wget -O ${INSTALL_FOLDER}/modesmixer2_ubuntu_20.04_x86_64_20210228.tgz "https://drive.google.com/uc?export=download&id=1PAKnH9pxPeXTKu3yrYRdtGHoDAhlheKo"
+echo "Downloading modeSMixer2 file from Github"
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/modesmixer2_ubuntu_20.04_x86_64_20210228.tgz -C ${INSTALL_FOLDER}
+sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
