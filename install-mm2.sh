@@ -1,12 +1,15 @@
 #!/bin/bash
 VERSION=modesmixer2_rpi4_deb10_20190413
-DOWNLOAD_ID=1YY7wQNtqrPk7qtE3OB9DGkc4nDalJsCS
+#DOWNLOAD_ID=1YY7wQNtqrPk7qtE3OB9DGkc4nDalJsCS
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 sudo mkdir ${INSTALL_FOLDER}
-echo "Downloading modeSMixer2 file from Google Drive"
-sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=${DOWNLOAD_ID}"
+#echo "Downloading modeSMixer2 file from Google Drive"
+#sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=${DOWNLOAD_ID}"
+echo "Downloading modeSMixer2 file from Github"
+sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"
+
 
 echo "Unzipping downloaded file"
 sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
