@@ -44,7 +44,7 @@ EOM
 sudo chmod 644 ${CONFIG_FILE}
 
 echo "Creating User mm2 to run modesmixer2"
-sudo useradd --system mm2
+sudo adduser --system --no-create-home mm2
 
 echo "Assigning ownership of install folder to user mm2"
 sudo chown mm2:mm2 -R ${INSTALL_FOLDER}
