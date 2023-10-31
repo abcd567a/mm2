@@ -1,7 +1,8 @@
 ## mm2
 ### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
 </br>
-
+**NOTE:** If installation on **Bookworm OS** fails, then see this alternative:
+[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)</br></br>
 Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
 **(1) For 32-bit Raspberry Pi OS / 32-bit Armbian OS / 32-bit Kali Linux Arm OS / 32-bit Arch Linux Arm OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
