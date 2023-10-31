@@ -1,15 +1,20 @@
 ## mm2
 ### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
 </br>
-**NOTE:** If installation on **Bookworm OS** fails, then see this alternative:
-[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)</br></br>
-Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
+
+**NOTE:** If installation on **Bookworm OS** fails, then see this alternative: </br> **[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)** </br></br>
+
+### Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
+
 **(1) For 32-bit Raspberry Pi OS / 32-bit Armbian OS / 32-bit Kali Linux Arm OS / 32-bit Arch Linux Arm OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
+
 **(2) For 64 Bit Raspberry Pi OS / 64-bit Kali Linux Arm OS / 64-bit Arch Linux Arm OS:** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-64bit.sh)" ` </br></br>
+
 **(3) For Ubuntu 20.04 (x86_64), Kali Linux 2020 amd64, & Archlinux-2021 (x86_64) :** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu20.sh)" ` </br></br>
+
 **(4) For Debian 10.5 (x86_64):** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-debian10.sh)" ` </br></br>
 After script finishes, it displays following message
