@@ -2,7 +2,7 @@
 ### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
 </br>
 
-**NOTE:** If installation on **Bookworm OS** fails, then see this alternative: </br> **[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)** </br></br>
+**NOTE:** If ModeSMixer2 fails to install on **Bookworm OS**, then see this alternative: </br> **[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)** </br></br>
 
 ### Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
 
