@@ -17,6 +17,8 @@ echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
 
 echo "Installing dependencies libssl1.1 and  libstdc++6"
+wget http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
+dpkg -i libssl1.1_1.1.1w-0+deb11u1_armhf.deb
 apt install libssl1.1:armhf
 apt install libstdc++6:armhf
 
