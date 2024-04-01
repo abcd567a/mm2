@@ -4,22 +4,26 @@ VERSION=modesmixer2_aarch64_rpi4_Raspberry_Pi_OS_20210228
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
-sudo mkdir ${INSTALL_FOLDER}
+mkdir ${INSTALL_FOLDER}
 #echo "Downloading modeSMixer2 file from Google Drive"
 #sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=${DOWNLOAD_ID}"    
 echo "Downloading modeSMixer2 file from Github"
-sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"    
+wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"    
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
+tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
-sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
+ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
+
+echo "Installing dependencies libssl1.1 and  libstdc++6"
+apt install libssl1.1
+apt install libstdc++6
 
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
-sudo touch ${SCRIPT_FILE}
-sudo chmod 777 ${SCRIPT_FILE}
+touch ${SCRIPT_FILE}
+chmod 777 ${SCRIPT_FILE}
 echo "Writing code to startup script file mm2.sh"
 /bin/cat <<EOM >${SCRIPT_FILE}
 #!/bin/sh
@@ -32,26 +36,26 @@ sudo chmod +x ${SCRIPT_FILE}
 
 echo "Creating config file mm2.conf"
 CONFIG_FILE=${INSTALL_FOLDER}/mm2.conf
-sudo touch ${CONFIG_FILE}
-sudo chmod 777 ${CONFIG_FILE}
+touch ${CONFIG_FILE}
+chmod 777 ${CONFIG_FILE}
 echo "Writing code to config file mm2.conf"
 /bin/cat <<EOM >${CONFIG_FILE}
 --inConnectId 127.0.0.1:30005:ADSB
 --inConnectId 127.0.0.1:30105:MLAT
 --web 8787
 EOM
-sudo chmod 644 ${CONFIG_FILE}
+chmod 644 ${CONFIG_FILE}
 
 echo "Creating User mm2 to run modesmixer2"
-sudo useradd --system mm2
+useradd --system mm2
 
 echo "Assigning ownership of install folder to user mm2"
-sudo chown mm2:mm2 -R ${INSTALL_FOLDER}
+chown mm2:mm2 -R ${INSTALL_FOLDER}
 
 echo "Creating Service file mm2.service"
 SERVICE_FILE=/lib/systemd/system/mm2.service
-sudo touch ${SERVICE_FILE}
-sudo chmod 777 ${SERVICE_FILE}
+touch ${SERVICE_FILE}
+chmod 777 ${SERVICE_FILE}
 /bin/cat <<EOM >${SERVICE_FILE}
 # modesmixer2 service for systemd
 [Unit]
@@ -74,9 +78,9 @@ WantedBy=default.target
 
 EOM
 
-sudo chmod 644 ${SERVICE_FILE}
-sudo systemctl enable mm2
-sudo systemctl restart mm2
+chmod 644 ${SERVICE_FILE}
+systemctl enable mm2
+systemctl restart mm2
 
 echo " "
 echo " "
