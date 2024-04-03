@@ -15,6 +15,12 @@ sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
 
+echo "Installing dependencies libssl1.1 and  libstdc++6"
+wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
+dpkg -i ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
+apt install libssl1.1
+apt install libstdc++6
+
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
 sudo touch ${SCRIPT_FILE}
