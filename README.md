@@ -1,4 +1,6 @@
 ## mm2
+#### To download ModeSMixer2 packages for varios OS and architures, click link below:</br>https://github.com/abcd567a/mm2/releases/tag/v1
+
 ### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
 </br>
 
