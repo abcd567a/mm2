@@ -16,6 +16,9 @@ tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
 
+echo -e "\e[1;32m...ADDING ARCHITECTURE armhf ...\e[39m"
+sleep 2
+sudo dpkg --add-architecture armhf
 echo -e "\e[1;32m...UPDATING ... \e[39m"
 sleep 2
 apt update
