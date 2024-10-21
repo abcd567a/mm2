@@ -61,8 +61,13 @@ chmod 644 ${CONFIG_FILE}
 echo "Creating User mm2 to run modesmixer2"
 adduser --system --no-create-home mm2
 
+echo "Creating distance file distances.json"
+DISTANCE_FILE=${INSTALL_FOLDER}/distances.json
+touch ${DISTANCE_FILE}
+chown mm2 ${DISTANCE_FILE}
+
 echo "Assigning ownership of install folder to user mm2"
-sudo chown mm2:mm2 -R ${INSTALL_FOLDER}
+chown mm2 -R ${INSTALL_FOLDER}
 
 echo "Creating Service file mm2.service"
 SERVICE_FILE=/lib/systemd/system/mm2.service
