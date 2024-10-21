@@ -16,9 +16,16 @@ tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
 
-echo "Installing dependencies libssl1.1 and  libstdc++6"
-apt install libssl1.1
-apt install libstdc++6
+echo -e "\e[1;32m...UPDATING ... \e[39m"
+sleep 2
+sudo apt update
+echo -e "\e[1;32m...INSTALLING DEPENDENCY PACKAGES ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 2 (libssl1.1) ... \e[39m"
+sleep 2
+sudo apt install -y libssl1.1
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 2 (libstdc++6) ... \e[39m"
+sleep 2
+sudo apt install -y libstdc++6
 
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
