@@ -11,8 +11,9 @@
 ### (1) For 32-bit (armhf) & 64-bit (arm64)
 - **Raspberry Pi OS**
 - **Armbian OS**
+- **DietPi OS**
 - **Kali Linux Arm OS**
-- **Arch Linux Arm OS**
+
 
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
 
