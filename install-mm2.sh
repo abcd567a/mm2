@@ -23,15 +23,18 @@ echo -e "\e[1;32m...UPDATING ... \e[39m"
 sleep 2
 apt update
 echo -e "\e[1;32m...INSTALLING DEPENDENCY PACKAGES ... \e[39m"
-echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 2 (libssl1.1:armhf) ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1:armhf) ... \e[39m"
 sleep 2
 wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_armhf.deb http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
 dpkg -i ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
 apt -y --fix-broken install
 apt install -y libssl1.1:armhf
-echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 2 (libstdc++6:armhf) ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 3 (libstdc++6:armhf) ... \e[39m"
 sleep 2
 apt install -y libstdc++6:armhf
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 3 of 3 (netbase) ... \e[39m"
+sleep 2
+apt install -y netbase
 
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
