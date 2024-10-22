@@ -2,13 +2,9 @@
 #### To download ModeSMixer2, ModeSDeco2, and AcarSDeco2 packages for varios OS and architures, click link below:</br>https://github.com/abcd567a/mm2/releases/tag/v1
 
 ### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
-</br>
 
-**NOTE:** If ModeSMixer2 fails to install, then see this alternative: </br> **[https://github.com/abcd567a/mixer/blob/master/README.md](https://github.com/abcd567a/mixer/blob/master/README.md)** </br></br>
-
-### Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br></br>
-
-### (1) For 32-bit (armhf) & 64-bit (arm64)
+### Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br>
+### (1) For <ins>32-bit (armhf)</ins> and <ins>64-bit (arm64)</ins>
 - **Raspberry Pi OS**
 - **Armbian OS**
 - **DietPi OS**
