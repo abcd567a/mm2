@@ -1,12 +1,9 @@
 #!/bin/bash
 VERSION=modesmixer2_rpi4_deb10_20190413
-#DOWNLOAD_ID=1YY7wQNtqrPk7qtE3OB9DGkc4nDalJsCS
 INSTALL_FOLDER=/usr/share/mm2
 
 echo "Creating folder mm2"
 mkdir ${INSTALL_FOLDER}
-#echo "Downloading modeSMixer2 file from Google Drive"
-#sudo wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://drive.google.com/uc?export=download&id=${DOWNLOAD_ID}"
 echo "Downloading modeSMixer2 file from Github"
 wget -O ${INSTALL_FOLDER}/${VERSION}.tgz "https://github.com/abcd567a/mm2/releases/download/v1/${VERSION}.tgz"
 
@@ -27,9 +24,7 @@ echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1:armhf) ... \e[39m"
 sleep 2
 apt install -y libssl1.1:armhf
 wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_armhf.deb http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
-dpkg -i --skip-same-version ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
-apt -y --fix-broken install
-
+apt install ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_armhf.deb
 echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 3 (libstdc++6:armhf) ... \e[39m"
 sleep 2
 apt install -y libstdc++6:armhf
