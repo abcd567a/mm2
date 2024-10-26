@@ -14,11 +14,11 @@
 
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
 
-**(2) For Ubuntu 20.04 & 22.04 (x86_64), Kali Linux 2020 amd64, & Archlinux-2021 (x86_64) :** </br>
-`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu20.sh)" ` </br></br>
+**(2) For Ubuntu 20, 22 & 24 (x86_64), Kali Linux 2020, 2022, & 2024 amd64 :** </br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu.sh)" ` </br></br>
 
-**(4) For Debian 10.5 (x86_64):** </br>
-`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-debian10.sh)" ` </br></br>
+**(4) For Debian 10, 11, 12, & 13 (x86_64):** </br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-debian.sh)" ` </br></br>
 After script finishes, it displays following message
 ```
 =======================
