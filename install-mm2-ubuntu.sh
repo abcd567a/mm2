@@ -19,13 +19,13 @@ echo -e "\e[1;32m...UPDATING ... \e[39m"
 sleep 2
 apt update
 echo -e "\e[1;32m...INSTALLING DEPENDENCY PACKAGES ... \e[39m"
-echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1:amd54) ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1) ... \e[39m"
 sleep 2
 apt install -y libssl1.1
 wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
 apt install -y ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
 
-echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 3 (libstdc++6:armhf) ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 3 (libstdc++6) ... \e[39m"
 sleep 2
 apt install -y libstdc++6
 
