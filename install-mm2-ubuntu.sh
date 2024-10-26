@@ -15,11 +15,23 @@ sudo tar xvzf ${INSTALL_FOLDER}/${VERSION}.tgz -C ${INSTALL_FOLDER}
 echo "Creating symlink to modesmixer2 binary in folder /usr/bin/ "
 sudo ln -s ${INSTALL_FOLDER}/modesmixer2 /usr/bin/modesmixer2
 
-echo "Installing dependencies libssl1.1 and  libstdc++6"
+echo -e "\e[1;32m...UPDATING ... \e[39m"
+sleep 2
+apt update
+echo -e "\e[1;32m...INSTALLING DEPENDENCY PACKAGES ... \e[39m"
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1:amd54) ... \e[39m"
+sleep 2
+apt install -y libssl1.1
 wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
-dpkg -i ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
-apt install libssl1.1
-apt install libstdc++6
+apt install -y ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb
+
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 2 of 3 (libstdc++6:armhf) ... \e[39m"
+sleep 2
+apt install -y libstdc++6
+
+echo -e "\e[1;32m...INSTALLING DEPENDENCY 3 of 3 (netbase) ... \e[39m"
+sleep 2
+apt install -y netbase
 
 echo "Creating startup script file mm2.sh"
 SCRIPT_FILE=${INSTALL_FOLDER}/mm2.sh
