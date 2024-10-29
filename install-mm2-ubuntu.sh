@@ -23,7 +23,7 @@ echo -e "\e[1;32m...INSTALLING DEPENDENCY 1 of 3 (libssl1.1) ... \e[39m"
 sleep 2
 apt install -y libssl1.1
 
-if [[ ! `dpkg-query -W libssl1.1:armhf` ]]; then
+if [[ ! `dpkg-query -W libssl1.1` ]]; then
 wget -O ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb "http://http.us.debian.org/debian/pool/main/o/openssl/libssl1.1_1.1.1w-0+deb11u1_amd64.deb";
 apt install -y ${INSTALL_FOLDER}/libssl1.1_1.1.1w-0+deb11u1_amd64.deb;
 fi
