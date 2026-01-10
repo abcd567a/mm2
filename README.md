@@ -1,23 +1,30 @@
 ## mm2
 #### To download ModeSMixer2, ModeSDeco2, and AcarSDeco2 packages for varios OS and architures, click link below:</br>https://github.com/abcd567a/mm2/releases/tag/v1
 
-### ModeSMixer2 installation script for RPi 2/3/4, and PC x86_64 amd64:
-
-### Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2. </br>
-### (1) For <ins>32-bit (armhf)</ins> and <ins>64-bit (arm64)</ins>
-- **Raspberry Pi OS**
-- **Ubuntu24 OS for RPi**
+### (1) ModeSMixer2 installation script for RPi 2/3/4:
+- **Raspberry Pi OS Bullseye, Bookworm & Trixie**
+- **Ubuntu-24 OS for RPi**
 - **Armbian OS for Rpi & OrangePi**
 - **DietPi OS for RPi**
 - **Kali Linux Arm OS for RPi**
 
 
+**(1.1) For <ins> <ins>64-bit (arm64 / aarch64)</ins>**
+**Copy-paste following command in SSH console and press Enter key. The script will install and configure modesmixer2.** </br>
+
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-64bit.sh)" `</br></br>
+
+**(1.2) For <ins>32-bit (armhf)</ins>**
+
+
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2.sh)" `</br></br>
 
-**(2) For Ubuntu 20, 22 & 24 (x86_64), Kali Linux 2020, 2022, & 2024 amd64 :** </br>
+
+### (2) ModeSMixer2 installation script for PC x86_64 amd64:
+**(2.1) For Ubuntu 20, 22 & 24 (x86_64), Kali Linux 2020, 2022, & 2024 amd64 :** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-ubuntu.sh)" ` </br></br>
 
-**(4) For Debian 10, 11, 12, & 13 (x86_64):** </br>
+**(2.2) For Debian 10, 11, 12, & 13 (x86_64):** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/mm2/master/install-mm2-debian.sh)" ` </br></br>
 After script finishes, it displays following message
 ```
